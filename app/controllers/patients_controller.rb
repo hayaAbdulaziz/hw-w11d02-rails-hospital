@@ -21,7 +21,6 @@ class PatientsController < ApplicationController
           def update
             patients = Patient.find(params[:id])
             patients.update(params.require(:patients).permit(:first_name, :last_name, :diagnosis, :born_on))
-              
             redirect_to patients
           end
           private 
