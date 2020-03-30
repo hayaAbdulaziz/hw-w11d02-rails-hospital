@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'patients/new', to: 'patients#new'
   get 'patients/:id' , to: 'patients#show' , as:'patient'
   get 'patients', to: 'patients#index'
-  get 'todos/new', to: 'todos#new'
-  # post 'patients', to: 'patients#create'
+  get 'patients/new', to: 'patients#new'
+   post 'patients', to: 'patients#create'
   get 'pages/home'
   root 'pages#home'
 
